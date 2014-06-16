@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ducpd_Hello>
+            <version>1.0</version>
+        </Ducpd_Hello>
+    </modules>
+    <frontend>
+        <routers>
+            <hello>
+                <use>standard</use>
+                <args>
+                    <module>Ducpd_Hello</module>
+                    <frontName>hello</frontName>
+                </args>
+            </hello>
+        </routers>
+        <events>
+            <controller_front_send_response_before>
+                <observers>
+                    <ducpd_hello>
+                        <class>Ducpd_Hello_Model_Observer</class>
+                        <method>showBeforeSendResponse</method>
+                    </ducpd_hello>
+                </observers>
+            </controller_front_send_response_before>
+
+            <catalog_product_load_after>
+                <observers>
+                    <ducpd_hello>
+                        <class>Ducpd_Hello_Model_Observer</class>
+                        <method>reducePriceInProductDetail</method>
+                    </ducpd_hello>
+                </observers>
+            </catalog_product_load_after>
+            <catalog_product_collection_load_after>
+                <observers>
+                    <ducpd_hello>
+                        <class>Ducpd_Hello_Model_Observer</class>
+                        <method>reducePriceInProductList</method>
+                    </ducpd_hello>
+                </observers>
+            </catalog_product_collection_load_after>
+        </events>
+    </frontend>
+</config>

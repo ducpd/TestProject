@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main Layout</title>
+    <style>
+
+    </style>
+    <style>
+        /* Layout ================================================================================ */
+        .wrapper {
+            min-width: 954px;
+        }
+
+        .page {
+        }
+
+        .page-print {
+            background: #fff;
+            padding: 25px 30px;
+            text-align: left;
+        }
+
+        .page-empty {
+            background: #fff;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .page-popup {
+            background: #fff;
+            padding: 25px 30px;
+            text-align: left;
+        }
+
+        .main {
+            margin: 0 auto;
+            min-height: 370px;
+            text-align: left;
+        }
+
+        /* Base Columns */
+        .col-left {
+            float: left;
+            width: 195px;
+            padding: 0 0 1px;
+            min-height: 360px;
+            border: thin solid #1200ff;margin: 5px;
+        }
+
+        .col-main {
+            float: left;
+            width: 890px;
+            padding: 0 0 1px;
+            min-height: 360px;
+            border: thin solid #1200ff;margin: 5px;
+
+        }
+
+        .col-right {
+            float: right;
+            width: 195px;
+            padding: 0 0 1px;
+            min-height: 360px;
+            border: thin solid #1200ff;margin: 5px;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="page" style="border: thin solid #1200ff;margin: 5px;">
+        <div style="border: thin solid #1200ff;margin: 5px;min-height: 30px;">
+            <?php echo $this->getChildHtml('header') ?>
+        </div>
+        <div class="main-container col3-layout">
+            <div class="main">
+                <div class="col-left sidebar" style="border: thin solid #1200ff;margin: 5px;">
+                    <?php echo $this->getChildHtml('left') ?>
+                    <strong>Left</strong>
+                </div>
+                <div class="col-main" style="border: thin solid #1200ff;margin: 5px;">
+                    <?php echo $this->getChildHtml('content') ?>
+                    <strong>Content</strong>
+                </div>
+                <div class="col-right sidebar" style="border: thin solid #1200ff;margin: 5px;">
+                    <?php echo $this->getChildHtml('right') ?>
+                    <strong>Right</strong>
+                </div>
+            </div>
+        </div>
+        <div style="border: thin solid #1200ff;margin: 5px;">
+            <?php echo $this->getChildHtml('footer') ?>
+        </div>
+    </div>
+</div>
+</body>
+</html>

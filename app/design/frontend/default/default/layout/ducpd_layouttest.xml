@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<layout>
+    <prepare_layout>
+        <update handle="default"></update>
+        <remove name="breadcrumbs"></remove>
+        <reference name="head">
+            <action method="unsetChildren"></action>
+            <action method="addCss">
+                <stylesheet>css/layouttest.css</stylesheet>
+            </action>
+        </reference>
+        <remove name="global_notices"></remove>
+        <reference name="header">
+            <action method="unsetChildren"></action>
+            <block type="core/template" template="logo/logo.phtml" name="logo" as="logo">
+            </block>
+            <action method="setTemplate">
+                <template>header/header.phtml</template>
+            </action>
+            <block type="core/text" name="say.header">
+                <action method="setText">
+                    <text>HEADER</text>
+                </action>
+            </block>
+        </reference>
+        <reference name="content">
+            <block type="core/text" name="say.content">
+                <action method="setText">
+                    <text>CONTENT</text>
+                </action>
+            </block>
+        </reference>
+        <reference name="left">
+            <action method="unsetChildren"></action>
+            <block type="core/text" name="say.left">
+                <action method="setText">
+                    <text>LEFT</text>
+                </action>
+            </block>
+        </reference>
+        <reference name="right">
+            <action method="unsetChildren"></action>
+            <block type="core/text" name="say.right">
+                <action method="setText">
+                    <text>RIGHT</text>
+                </action>
+            </block>
+        </reference>
+        <reference name="footer">
+            <action method="unsetChildren"></action>
+            <block type="core/text" name="say.footer">
+                <action method="setText">
+                    <text>FOOTER</text>
+                </action>
+            </block>
+        </reference>
+    </prepare_layout>
+
+    <Layouttest_index3_handle>
+        <update handle="prepare_layout"></update>
+        <reference name="left">
+            <block type="core/template" template="subblock/block_c.phtml" name="block_c" as="block_c">
+            </block>
+        </reference>
+        <reference name="content">
+            <block type="core/template" template="subblock/block_a.phtml" name="block_a" as="block_a">
+            </block>
+            <block type="core/template" template="subblock/block_b.phtml" name="block_b" as="block_b">
+            </block>
+        </reference>
+        <reference name="right">
+            <block type="core/template" template="subblock/block_d.phtml" name="block_d" as="block_d">
+            </block>
+        </reference>
+    </Layouttest_index3_handle>
+
+    <Layouttest_index4_handle>
+        <update handle="Layouttest_index3_handle"></update>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/2columns-left.phtml</template>
+            </action>
+        </reference>
+        <reference name="left">
+            <block type="core/template" template="subblock/block_d.phtml" name="block_d" as="block_d">
+            </block>
+        </reference>
+        <reference name="block_a">
+            <action method="setTemplate">
+                <template>subblock/block_e.phtml</template>
+            </action>
+        </reference>
+    </Layouttest_index4_handle>
+</layout>

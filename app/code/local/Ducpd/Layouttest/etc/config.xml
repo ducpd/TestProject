@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ducpd_Layouttest>
+            <version>1.1.1</version>
+        </Ducpd_Layouttest>
+    </modules>
+    <frontend>
+        <routers>
+            <Layouttest>
+                <use>standard</use>
+                <args>
+                    <module>Ducpd_Layouttest</module>
+                    <frontName>layout</frontName>
+                </args>
+            </Layouttest>
+        </routers>
+        <layout>
+            <updates>
+                <ducpd_layouttest>
+                    <file>ducpd_layouttest.xml</file>
+                </ducpd_layouttest>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <helpers>
+            <Layouttest>
+                <class>Ducpd_Layouttest_Helper</class>
+            </Layouttest>
+        </helpers>
+    </global>
+</config>

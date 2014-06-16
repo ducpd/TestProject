@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ducpd_Hello>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Ducpd_Hello>
+    </modules>
+</config>

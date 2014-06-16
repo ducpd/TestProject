@@ -1,0 +1,67 @@
+<div class="page-title">
+    <h2>Create Product</h2>
+</div>
+<form action="<?php echo Mage::getUrl('vendors/product/save'); ?>" method="post" id="form-create-product">
+    <div class="fieldset">
+        <ul class="form-list">
+            <li class="fields">
+                <div class="field">
+                    <label class="required"><em>*</em><?php echo $this->__('Name') ?></label>
+
+                    <div class="input-box">
+                        <input type="text" class="input-text required-entry" maxlength="255" title="Name"
+                               value="" name="txtName" id="name">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="required"><em>*</em><?php echo $this->__('SKU') ?></label>
+
+                    <div class="input-box">
+                        <input type="text" class="input-text required-entry" maxlength="255" title="sku"
+                               value="" name="txtSku" id="sku">
+                    </div>
+                </div>
+            </li>
+            <li class="fields">
+                <div class="field">
+                    <label class="required"><em>*</em><?php echo $this->__('Price') ?></label>
+
+                    <div class="input-box">
+                        <input type="text" class="required-entry validate-number" maxlength="255" title="Price"
+                               value="" name="txtPrice" id="price">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="required"><em>*</em><?php echo $this->__('Vendor name') ?></label>
+                    <select name="txtVendor" id="vendor_id" class="required-entry validate-select">
+                        <option value="">--Please Select--</option>
+                        <?php
+                        $listVendor = $this->getListVendor();
+                        foreach ($listVendor as $vendor) {
+                            echo '<option value="' . $vendor['vendor_id'] . '">' . $vendor['name'] . '</option>';
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div class="field">
+                    <label class="required"><em>*</em><?php echo $this->__('Description') ?></label>
+
+                    <div class="input-box">
+                        <textarea class="input-text required-entry" title="Description" name="txtDescription"
+                                  id="description" cols="60" rows="10"></textarea>
+                    </div>
+                </div>
+            </li>
+            <div class="buttons-set">
+                <p class="required">* <?php echo $this->__('Required Fields') ?></p>
+                <button class="button" title="Save" type="submit"><span><span><?php echo $this->__('Submit') ?></span></span>
+                </button>
+            </div>
+        </ul>
+    </div>
+</form>
+<script type="text/javascript">
+    //< ![CDATA[
+    var customForm = new VarienForm('form-create-product', false);
+    //]]>
+</script>

@@ -1,0 +1,39 @@
+/* Base Columns */
+.col-left {
+    float: left;
+    width: 175px;
+    padding: 0 0 1px;
+    min-height: 360px;
+    border: thin solid #1200ff;margin: 5px;
+}
+
+.col-main {
+    float: left;
+    width: 650px;
+    padding: 0 0 1px;
+    min-height: 360px;
+    border: thin solid #1200ff;margin: 5px;
+
+}
+
+.col-right {
+    float: right;
+    width: 195px;
+    padding: 0 0 1px;
+    min-height: 360px;
+    border: thin solid #1200ff;margin: 5px;
+}
+
+.logo img
+{
+    display: none;
+}
+
+.footer
+{
+    border: thin solid #1200ff;margin: 5px;
+}
+
+.header{
+    border: thin solid #1200ff;margin: 5px;min-height: 30px;
+}

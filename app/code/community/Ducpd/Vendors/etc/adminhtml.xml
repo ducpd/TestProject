@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <Vendors>
+            <title>Vendors</title>
+            <children>
+                <ducpd_admin_vendor_index>
+                    <title>Vendors Manage</title>
+                    <action>adminhtml/vendor/index</action>
+                </ducpd_admin_vendor_index>
+            </children>
+        </Vendors>
+    </menu>
+</config>

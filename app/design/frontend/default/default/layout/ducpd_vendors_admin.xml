@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_vendor_index>
+        <reference name="content">
+            <block type="ducpd_vendors/adminhtml_vendor_grid" name="admin_vendor"></block>
+        </reference>
+    </adminhtml_vendor_index>
+</layout>

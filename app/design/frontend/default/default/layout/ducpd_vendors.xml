@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<layout>
+    <prepare_layout>
+        <update handle="default"></update>
+        <remove name="breadcrumbs"></remove>
+        <reference name="head">
+            <action method="unsetChildren"></action>
+            <!--<action method="addCss">-->
+            <!--<stylesheet>css/layouttest.css</stylesheet>-->
+            <!--</action>-->
+        </reference>
+        <remove name="global_notices"></remove>
+
+        <reference name="left">
+            <action method="unsetChildren"></action>
+            <block type="core/template" template="vendors/navigator.phtml"></block>
+        </reference>
+        <reference name="right">
+            <action method="unsetChildren"></action>
+        </reference>
+        <reference name="footer">
+            <action method="unsetChildren"></action>
+        </reference>
+    </prepare_layout>
+
+    <ducpd_vendors_index_handle>
+        <update handle="prepare_layout"></update>
+
+        <reference name="content">
+            <block type="Ducpd_Vendors_Block_Grid" template="vendors/grid.phtml"></block>
+        </reference>
+    </ducpd_vendors_index_handle>
+    <ducpd_vendors_create_handle>
+        <update handle="prepare_layout"></update>
+        <reference name="content">
+            <block type="core/template" template="vendors/create.phtml"></block>
+        </reference>
+    </ducpd_vendors_create_handle>
+    <ducpd_vendors_addProduct_handle>
+        <update handle="prepare_layout"></update>
+        <reference name="content">
+            <block type="Ducpd_Vendors_Block_Product" template="vendors/addProduct.phtml"></block>
+        </reference>
+    </ducpd_vendors_addProduct_handle>
+    <ducpd_vendors_listProduct_handle>
+        <update handle="prepare_layout"></update>
+        <reference name="content">
+            <block type="Ducpd_Vendors_Block_ListProduct" template="catalog/product/list.phtml"></block>
+        </reference>
+    </ducpd_vendors_listProduct_handle>
+</layout>

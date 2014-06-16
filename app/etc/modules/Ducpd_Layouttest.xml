@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ducpd_Layouttest>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Ducpd_Layouttest>
+    </modules>
+</config>

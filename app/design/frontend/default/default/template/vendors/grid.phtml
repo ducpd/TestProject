@@ -1,0 +1,28 @@
+<?php
+/* @var $collection Mage_Core_Model_Resource_Db_Collection_Abstract */
+$collection = $this->bindData();
+?>
+<table class="data-table">
+    <tr>
+        <td>Vendor ID</td>
+        <td>Vendor Name</td>
+        <td>Email</td>
+        <td>Contact</td>
+        <td>Description</td>
+    </tr>
+    <?php
+    foreach ($collection as $value) {
+        ?>
+        <tr>
+            <td><?php echo $value['vendor_id']; ?></td>
+            <td>
+                <a href="<?php echo Mage::getUrl('vendors/product/list?id=' . $value['vendor_id']); ?>"> <?php echo $value['name']; ?></a>
+            </td>
+            <td><?php echo $value['email']; ?></td>
+            <td><?php echo $value['contact']; ?></td>
+            <td><?php echo $value['description']; ?></td>
+        </tr>
+    <?php
+    }
+    ?>
+</table>

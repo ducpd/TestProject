@@ -1,0 +1,50 @@
+<form action="<?php echo Mage::getUrl('vendors/vendor/save'); ?>" method="post" id="form-create-vendor">
+<div class="entry-edit">
+    <div class="entry-edit-head">
+        <h4>Add Vendor</h4>
+    </div>
+    <div class="fieldset fieldset-wide">
+        <div class="hor-scroll">
+            <table class="form-list" cellspacing="0">
+                <tbody>
+                <tr>
+                    <td class="label">Name</td>
+                    <td class="value">
+                        <input type="text" name="txtName" class="input-text required-entry"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Email</td>
+                    <td class="value">
+                        <input type="text" name="txtEmail" class="input-text required-entry"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Contact</td>
+                    <td class="value">
+                        <input type="text" name="txtContact" class="input-text required-entry"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Description</td>
+                    <td class="value">
+                        <textarea name="txtDescription" class="input-text required-entry"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">&nbsp;</td>
+                    <td class="value">
+                        <input type="submit" name="btnSave" value="Save" class="button"/>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    </form>
+<script type="text/javascript">
+    //< ![CDATA[
+    var customForm = new VarienForm('form-create-vendor',false);
+    //]]>
+</script>
